@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Test de Radicalidad</title>
+  <title>Test de Radicalidad Socio-Política</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 700px;
+      max-width: 800px;
       margin: 40px auto;
       padding: 20px;
       background-color: #f9f9f9;
@@ -18,11 +18,20 @@
       text-align: center;
     }
     .question {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .scale {
+      margin-left: 10px;
     }
     button {
-      padding: 10px 15px;
-      margin-top: 20px;
+      margin-top: 30px;
+      padding: 12px 18px;
+      font-size: 16px;
       cursor: pointer;
     }
     .result {
@@ -30,47 +39,206 @@
       font-size: 1.2em;
       font-weight: bold;
     }
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #666;
+    }
   </style>
 </head>
 <body>
-  <h1>Test de Radicalidad</h1>
+  <h1>Test de Radicalidad Socio‑Política</h1>
   <form id="testForm">
+    <p><strong>Versión piloto · respuestas de 1 (en desacuerdo) a 5 (de acuerdo)</strong></p>
+
     <div class="question">
-      <label>1. Estoy dispuesto/a a romper las reglas si la causa lo merece.</label><br>
-      <input type="radio" name="q1" value="3"> Totalmente de acuerdo<br>
-      <input type="radio" name="q1" value="2"> De acuerdo<br>
-      <input type="radio" name="q1" value="1"> En desacuerdo<br>
-      <input type="radio" name="q1" value="0"> Totalmente en desacuerdo<br>
+      <label for="q1">1. Las verdades morales fundamentales son indiscutibles.</label>
+      <span class="scale">
+        <input type="radio" name="q1" value="1"> 1 <input type="radio" name="q1" value="2"> 2 <input type="radio" name="q1" value="3"> 3 <input type="radio" name="q1" value="4"> 4 <input type="radio" name="q1" value="5"> 5
+      </span>
     </div>
+    
     <div class="question">
-      <label>2. El fin justifica los medios.</label><br>
-      <input type="radio" name="q2" value="3"> Totalmente de acuerdo<br>
-      <input type="radio" name="q2" value="2"> De acuerdo<br>
-      <input type="radio" name="q2" value="1"> En desacuerdo<br>
-      <input type="radio" name="q2" value="0"> Totalmente en desacuerdo<br>
+      <label for="q2">2. Escuchar opiniones que contradicen mis valores es una pérdida de tiempo.</label>
+      <span class="scale">
+        <input type="radio" name="q2" value="1"> 1 <input type="radio" name="q2" value="2"> 2 <input type="radio" name="q2" value="3"> 3 <input type="radio" name="q2" value="4"> 4 <input type="radio" name="q2" value="5"> 5
+      </span>
     </div>
+    
     <div class="question">
-      <label>3. A veces la violencia es necesaria para provocar un cambio real.</label><br>
-      <input type="radio" name="q3" value="3"> Totalmente de acuerdo<br>
-      <input type="radio" name="q3" value="2"> De acuerdo<br>
-      <input type="radio" name="q3" value="1"> En desacuerdo<br>
-      <input type="radio" name="q3" value="0"> Totalmente en desacuerdo<br>
+      <label for="q3">3. Aun cuando no comparta una idea, podría estar parcialmente en lo cierto.</label>
+      <span class="scale">
+        <input type="radio" name="q3" value="1"> 1 <input type="radio" name="q3" value="2"> 2 <input type="radio" name="q3" value="3"> 3 <input type="radio" name="q3" value="4"> 4 <input type="radio" name="q3" value="5"> 5
+      </span>
     </div>
+    
     <div class="question">
-      <label>4. Me siento cómodo/a desafiando públicamente la autoridad.</label><br>
-      <input type="radio" name="q4" value="3"> Totalmente de acuerdo<br>
-      <input type="radio" name="q4" value="2"> De acuerdo<br>
-      <input type="radio" name="q4" value="1"> En desacuerdo<br>
-      <input type="radio" name="q4" value="0"> Totalmente en desacuerdo<br>
+      <label for="q4">4. Cambiar de opinión en temas éticos denota debilidad.</label>
+      <span class="scale">
+        <input type="radio" name="q4" value="1"> 1 <input type="radio" name="q4" value="2"> 2 <input type="radio" name="q4" value="3"> 3 <input type="radio" name="q4" value="4"> 4 <input type="radio" name="q4" value="5"> 5
+      </span>
     </div>
-    <button type="button" onclick="calcularResultado()">Calcular Resultado</button>
+    
+    <div class="question">
+      <label for="q5">5. El debate abierto ayuda a aproximarse a la verdad.</label>
+      <span class="scale">
+        <input type="radio" name="q5" value="1"> 1 <input type="radio" name="q5" value="2"> 2 <input type="radio" name="q5" value="3"> 3 <input type="radio" name="q5" value="4"> 4 <input type="radio" name="q5" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q6">6. Un buen ciudadano debe obedecer sin cuestionar a las autoridades legítimas.</label>
+      <span class="scale">
+        <input type="radio" name="q6" value="1"> 1 <input type="radio" name="q6" value="2"> 2 <input type="radio" name="q6" value="3"> 3 <input type="radio" name="q6" value="4"> 4 <input type="radio" name="q6" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q7">7. La sociedad funciona mejor cuando la gente ‘sabe su lugar’.</label>
+      <span class="scale">
+        <input type="radio" name="q7" value="1"> 1 <input type="radio" name="q7" value="2"> 2 <input type="radio" name="q7" value="3"> 3 <input type="radio" name="q7" value="4"> 4 <input type="radio" name="q7" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q8">8. La desobediencia civil puede ser necesaria para defender los derechos humanos.</label>
+      <span class="scale">
+        <input type="radio" name="q8" value="1"> 1 <input type="radio" name="q8" value="2"> 2 <input type="radio" name="q8" value="3"> 3 <input type="radio" name="q8" value="4"> 4 <input type="radio" name="q8" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q9">9. Quienes desafían las tradiciones ponen en riesgo la estabilidad social.</label>
+      <span class="scale">
+        <input type="radio" name="q9" value="1"> 1 <input type="radio" name="q9" value="2"> 2 <input type="radio" name="q9" value="3"> 3 <input type="radio" name="q9" value="4"> 4 <input type="radio" name="q9" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q10">10. Para mantener el orden, a veces es preciso castigar con severidad.</label>
+      <span class="scale">
+        <input type="radio" name="q10" value="1"> 1 <input type="radio" name="q10" value="2"> 2 <input type="radio" name="q10" value="3"> 3 <input type="radio" name="q10" value="4"> 4 <input type="radio" name="q10" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q11">11. Algunas culturas son naturalmente superiores a otras.</label>
+      <span class="scale">
+        <input type="radio" name="q11" value="1"> 1 <input type="radio" name="q11" value="2"> 2 <input type="radio" name="q11" value="3"> 3 <input type="radio" name="q11" value="4"> 4 <input type="radio" name="q11" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q12">12. En los equipos, los más fuertes deben dirigir al resto.</label>
+      <span class="scale">
+        <input type="radio" name="q12" value="1"> 1 <input type="radio" name="q12" value="2"> 2 <input type="radio" name="q12" value="3"> 3 <input type="radio" name="q12" value="4"> 4 <input type="radio" name="q12" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q13">13. Todas las personas merecen las mismas oportunidades, sin importar su grupo.</label>
+      <span class="scale">
+        <input type="radio" name="q13" value="1"> 1 <input type="radio" name="q13" value="2"> 2 <input type="radio" name="q13" value="3"> 3 <input type="radio" name="q13" value="4"> 4 <input type="radio" name="q13" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q14">14. Si un grupo fracasa, la culpa es sobre todo suya.</label>
+      <span class="scale">
+        <input type="radio" name="q14" value="1"> 1 <input type="radio" name="q14" value="2"> 2 <input type="radio" name="q14" value="3"> 3 <input type="radio" name="q14" value="4"> 4 <input type="radio" name="q14" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q15">15. Que existan jerarquías fuertes beneficia al conjunto de la sociedad.</label>
+      <span class="scale">
+        <input type="radio" name="q15" value="1"> 1 <input type="radio" name="q15" value="2"> 2 <input type="radio" name="q15" value="3"> 3 <input type="radio" name="q15" value="4"> 4 <input type="radio" name="q15" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q16">16. Limitar ciertas libertades es aceptable si fortalece la seguridad nacional.</label>
+      <span class="scale">
+        <input type="radio" name="q16" value="1"> 1 <input type="radio" name="q16" value="2"> 2 <input type="radio" name="q16" value="3"> 3 <input type="radio" name="q16" value="4"> 4 <input type="radio" name="q16" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q17">17. Prohibir manifestaciones contrarias a mi visión evitaría conflictos innecesarios.</label>
+      <span class="scale">
+        <input type="radio" name="q17" value="1"> 1 <input type="radio" name="q17" value="2"> 2 <input type="radio" name="q17" value="3"> 3 <input type="radio" name="q17" value="4"> 4 <input type="radio" name="q17" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q18">18. La libertad de prensa debe protegerse incluso para opiniones ofensivas.</label>
+      <span class="scale">
+        <input type="radio" name="q18" value="1"> 1 <input type="radio" name="q18" value="2"> 2 <input type="radio" name="q18" value="3"> 3 <input type="radio" name="q18" value="4"> 4 <input type="radio" name="q18" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q19">19. Quien no comparta los valores mayoritarios debería adaptarse o marcharse.</label>
+      <span class="scale">
+        <input type="radio" name="q19" value="1"> 1 <input type="radio" name="q19" value="2"> 2 <input type="radio" name="q19" value="3"> 3 <input type="radio" name="q19" value="4"> 4 <input type="radio" name="q19" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q20">20. Algunos derechos laborales deberían sacrificarse para impulsar la economía.</label>
+      <span class="scale">
+        <input type="radio" name="q20" value="1"> 1 <input type="radio" name="q20" value="2"> 2 <input type="radio" name="q20" value="3"> 3 <input type="radio" name="q20" value="4"> 4 <input type="radio" name="q20" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q21">21. En ciertos casos, la violencia es el único camino para salvar la sociedad.</label>
+      <span class="scale">
+        <input type="radio" name="q21" value="1"> 1 <input type="radio" name="q21" value="2"> 2 <input type="radio" name="q21" value="3"> 3 <input type="radio" name="q21" value="4"> 4 <input type="radio" name="q21" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q22">22. Justificar agresiones contra quienes ‘amenazan’ nuestra forma de vida es lógico.</label>
+      <span class="scale">
+        <input type="radio" name="q22" value="1"> 1 <input type="radio" name="q22" value="2"> 2 <input type="radio" name="q22" value="3"> 3 <input type="radio" name="q22" value="4"> 4 <input type="radio" name="q22" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q23">23. La violencia política tiende a agravar los problemas en vez de resolverlos.</label>
+      <span class="scale">
+        <input type="radio" name="q23" value="1"> 1 <input type="radio" name="q23" value="2"> 2 <input type="radio" name="q23" value="3"> 3 <input type="radio" name="q23" value="4"> 4 <input type="radio" name="q23" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q24">24. Si un líder que admiro aprueba medidas duras, debe de ser por buen motivo.</label>
+      <span class="scale">
+        <input type="radio" name="q24" value="1"> 1 <input type="radio" name="q24" value="2"> 2 <input type="radio" name="q24" value="3"> 3 <input type="radio" name="q24" value="4"> 4 <input type="radio" name="q24" value="5"> 5
+      </span>
+    </div>
+    
+    <div class="question">
+      <label for="q25">25. Los ‘enemigos’ no merecen la misma compasión que la gente de bien.</label>
+      <span class="scale">
+        <input type="radio" name="q25" value="1"> 1 <input type="radio" name="q25" value="2"> 2 <input type="radio" name="q25" value="3"> 3 <input type="radio" name="q25" value="4"> 4 <input type="radio" name="q25" value="5"> 5
+      </span>
+    </div>
+    
+    <button type="button" onclick="calcularResultado()">Calcular resultado</button>
+    <button type="reset">Reiniciar</button>
   </form>
   <div class="result" id="resultado"></div>
-
+  <div class="footer">
+    *Prototipo educativo basado en literatura sobre Autoritarismo (Altemeyer, 1981), 
+    Orientación a la Dominancia Social (Sidanius & Pratto, 1999) y otros. 
+    No sustituye a evaluación profesional ni debe usarse para decisiones que afecten los derechos de las personas.*
+  </div>
   <script>
     function calcularResultado() {
       let total = 0;
-      for (let i = 1; i <= 4; i++) {
+      for (let i = 1; i <= 25; i++) {
         const radios = document.getElementsByName("q" + i);
         let answered = false;
         for (const r of radios) {
@@ -86,16 +254,20 @@
         }
       }
 
-      let resultadoTexto = "";
-      if (total >= 10) {
-        resultadoTexto = "Alto nivel de radicalidad percibida.";
-      } else if (total >= 6) {
-        resultadoTexto = "Nivel moderado de radicalidad.";
+      const promedio = total / 25;
+      let resultado = "";
+
+      if (promedio >= 4.1) {
+        resultado = "Tendencia radical alta.";
+      } else if (promedio >= 3.1) {
+        resultado = "Tendencia radical moderada.";
+      } else if (promedio >= 2.1) {
+        resultado = "Tendencia abierta con matices.";
       } else {
-        resultadoTexto = "Bajo nivel de radicalidad.";
+        resultado = "Tendencia deliberativa y poco radical.";
       }
 
-      document.getElementById("resultado").textContent = resultadoTexto;
+      document.getElementById("resultado").textContent = resultado;
     }
   </script>
 </body>
